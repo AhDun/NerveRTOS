@@ -1,0 +1,1096 @@
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\CPU.OBJ
+ASSEMBLER INVOKED BY: C:\Keil\C51\BIN\A51.EXE .\Objects\CPU.src PR(.\Listings\CPU.ls1) EP DEBUG
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; .\Objects\CPU.SRC generated from: OS\CPU.c
+                       2     ; COMPILER INVOKED BY:
+                       3     ;        C:\Keil\C51\BIN\C51.EXE OS\CPU.c OMF2 OPTIMIZE(9,SPEED) BROWSE INCDIR(.\App;.\ASM;
+                             .\Func;.\Drive;.\OS;.\User) DEBUG PRINT(.\Listings\CPU.lst) TABS(2) SRC(.\Objects\CPU.SRC)
+                       4     
+                       5     $nomod51 
+                       6     
+                       7     NAME    CPU
+                       8     
+  00DA                 9     CCF2    BIT     0D8H.2
+  0092                10     P1M0    DATA    092H
+  0093                11     P0M1    DATA    093H
+  00DB                12     CCF3    BIT     0D8H.3
+  0096                13     P2M0    DATA    096H
+  0091                14     P1M1    DATA    091H
+  0080                15     P0      DATA    080H
+  00B2                16     P3M0    DATA    0B2H
+  0095                17     P2M1    DATA    095H
+  0090                18     P1      DATA    090H
+  00B4                19     P4M0    DATA    0B4H
+  00B1                20     P3M1    DATA    0B1H
+  00A0                21     P2      DATA    0A0H
+  00AB                22     WKTCH   DATA    0ABH
+  00CA                23     P5M0    DATA    0CAH
+  00B3                24     P4M1    DATA    0B3H
+  00B0                25     P3      DATA    0B0H
+  00CC                26     P6M0    DATA    0CCH
+  00C9                27     P5M1    DATA    0C9H
+  00C0                28     P4      DATA    0C0H
+  00D6                29     AC      BIT     0D0H.6
+  00F6                30     PWMIF   DATA    0F6H
+  00C6                31     ISP_TRIG        DATA    0C6H
+  00E2                32     P7M0    DATA    0E2H
+  00CB                33     P6M1    DATA    0CBH
+  00C8                34     P5      DATA    0C8H
+  00AF                35     EA      BIT     0A8H.7
+  00E1                36     P7M1    DATA    0E1H
+  00E8                37     P6      DATA    0E8H
+  00AA                38     WKTCL   DATA    0AAH
+  00F8                39     P7      DATA    0F8H
+  00CE                40     SPCTL   DATA    0CEH
+  00DF                41     CF      BIT     0D8H.7
+  00FE                42     PWMCR   DATA    0FEH
+  00F9                43     CH      DATA    0F9H
+  00A2                44     P_SW1   DATA    0A2H
+  00BA                45     P_SW2   DATA    0BAH
+  00AD                46     EADC    BIT     0A8H.5
+  00A8                47     IE      DATA    0A8H
+  00E5                48     DPH1    DATA    0E5H
+  00E9                49     CL      DATA    0E9H
+  00C5                50     IAP_CMD DATA    0C5H
+  00FA                51     CCAP0H  DATA    0FAH
+  00FB                52     CCAP1H  DATA    0FBH
+  00E4                53     DPL1    DATA    0E4H
+  00FC                54     CCAP2H  DATA    0FCH
+  00FD                55     CCAP3H  DATA    0FDH
+  00BD                56     ADC_RES DATA    0BDH
+  00B6                57     IP2H    DATA    0B6H
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     2
+
+  00EA                58     CCAP0L  DATA    0EAH
+  00DE                59     CR      BIT     0D8H.6
+  00AE                60     TA      DATA    0AEH
+  00F7                61     PWMFDCR DATA    0F7H
+  00EB                62     CCAP1L  DATA    0EBH
+  00DA                63     CCAPM0  DATA    0DAH
+  00EC                64     CCAP2L  DATA    0ECH
+  00DB                65     CCAPM1  DATA    0DBH
+  008F                66     INTCLKO DATA    08FH
+  00ED                67     CCAP3L  DATA    0EDH
+  00DC                68     CCAPM2  DATA    0DCH
+  00AC                69     ES      BIT     0A8H.4
+  00DD                70     CCAPM3  DATA    0DDH
+  00BD                71     PADC    BIT     0B8H.5
+  00B8                72     IP      DATA    0B8H
+  00DE                73     ADCCFG  DATA    0DEH
+  0098                74     RI      BIT     098H.0
+  00D7                75     CY      BIT     0D0H.7
+  0099                76     TI      BIT     098H.1
+  00C3                77     IAP_ADDRH       DATA    0C3H
+  00C5                78     ISP_CMD DATA    0C5H
+  00BC                79     PS      BIT     0B8H.4
+  0081                80     SP      DATA    081H
+  00D9                81     CMOD    DATA    0D9H
+  00D8                82     CCON    DATA    0D8H
+  00C4                83     IAP_ADDRL       DATA    0C4H
+  00BF                84     PPCA    BIT     0B8H.7
+  00D2                85     OV      BIT     0D0H.2
+  00E6                86     CMPCR1  DATA    0E6H
+  00E7                87     CMPCR2  DATA    0E7H
+  00AE                88     ELVD    BIT     0A8H.6
+  0080                89     P00     BIT     080H.0
+  00BC                90     ADC_CONTR       DATA    0BCH
+  0099                91     SBUF    DATA    099H
+  0087                92     PCON    DATA    087H
+  0090                93     P10     BIT     090H.0
+  0081                94     P01     BIT     080H.1
+  00C3                95     ISP_ADDRH       DATA    0C3H
+  00A0                96     P20     BIT     0A0H.0
+  0091                97     P11     BIT     090H.1
+  0082                98     P02     BIT     080H.2
+  00B0                99     P30     BIT     0B0H.0
+  00A1               100     P21     BIT     0A0H.1
+  0092               101     P12     BIT     090H.2
+  0083               102     P03     BIT     080H.3
+  0098               103     SCON    DATA    098H
+  00C0               104     P40     BIT     0C0H.0
+  00B1               105     P31     BIT     0B0H.1
+  00A2               106     P22     BIT     0A0H.2
+  0093               107     P13     BIT     090H.3
+  0084               108     P04     BIT     080H.4
+  0089               109     TMOD    DATA    089H
+  0088               110     TCON    DATA    088H
+  00C8               111     P50     BIT     0C8H.0
+  00C1               112     P41     BIT     0C0H.1
+  00B2               113     P32     BIT     0B0H.2
+  00A3               114     P23     BIT     0A0H.3
+  0094               115     P14     BIT     090H.4
+  0085               116     P05     BIT     080H.5
+  00C4               117     ISP_ADDRL       DATA    0C4H
+  00E8               118     P60     BIT     0E8H.0
+  00C9               119     P51     BIT     0C8H.1
+  00C2               120     P42     BIT     0C0H.2
+  00B3               121     P33     BIT     0B0H.3
+  00A4               122     P24     BIT     0A0H.4
+  0095               123     P15     BIT     090H.5
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     3
+
+  0086               124     P06     BIT     080H.6
+  00BE               125     PLVD    BIT     0B8H.6
+  00F8               126     P70     BIT     0F8H.0
+  00E9               127     P61     BIT     0E8H.1
+  00CA               128     P52     BIT     0C8H.2
+  00C3               129     P43     BIT     0C0H.3
+  00B4               130     P34     BIT     0B0H.4
+  00A5               131     P25     BIT     0A0H.5
+  0096               132     P16     BIT     090H.6
+  0087               133     P07     BIT     080H.7
+  00F9               134     P71     BIT     0F8H.1
+  00EA               135     P62     BIT     0E8H.2
+  00CB               136     P53     BIT     0C8H.3
+  00C4               137     P44     BIT     0C0H.4
+  00B5               138     P35     BIT     0B0H.5
+  00A6               139     P26     BIT     0A0H.6
+  0097               140     P17     BIT     090H.7
+  00FA               141     P72     BIT     0F8H.2
+  00EB               142     P63     BIT     0E8H.3
+  00CC               143     P54     BIT     0C8H.4
+  00C5               144     P45     BIT     0C0H.5
+  00B6               145     P36     BIT     0B0H.6
+  00A7               146     P27     BIT     0A0H.7
+  00FB               147     P73     BIT     0F8H.3
+  00EC               148     P64     BIT     0E8H.4
+  00CD               149     P55     BIT     0C8H.5
+  00C6               150     P46     BIT     0C0H.6
+  00B7               151     P37     BIT     0B0H.7
+  00FC               152     P74     BIT     0F8H.4
+  00ED               153     P65     BIT     0E8H.5
+  00CE               154     P56     BIT     0C8H.6
+  00C7               155     P47     BIT     0C0H.7
+  00FD               156     P75     BIT     0F8H.5
+  00EE               157     P66     BIT     0E8H.6
+  00CF               158     P57     BIT     0C8H.7
+  00FE               159     P76     BIT     0F8H.6
+  00EF               160     P67     BIT     0E8H.7
+  0089               161     IE0     BIT     088H.1
+  00A1               162     BUS_SPEED       DATA    0A1H
+  00FF               163     P77     BIT     0F8H.7
+  008B               164     IE1     BIT     088H.3
+  00AF               165     IE2     DATA    0AFH
+  008E               166     AUXR    DATA    08EH
+  00F0               167     B       DATA    0F0H
+  00C7               168     IAP_CONTR       DATA    0C7H
+  00F1               169     PWMCFG  DATA    0F1H
+  00E0               170     ACC     DATA    0E0H
+  00A9               171     ET0     BIT     0A8H.1
+  008D               172     TF0     BIT     088H.5
+  00AB               173     ET1     BIT     0A8H.3
+  008F               174     TF1     BIT     088H.7
+  00B5               175     IP2     DATA    0B5H
+  00FF               176     RSTCFG  DATA    0FFH
+  009A               177     RB8     BIT     098H.2
+  008C               178     TH0     DATA    08CH
+  008D               179     TH1     DATA    08DH
+  0088               180     IT0     BIT     088H.0
+  00A8               181     EX0     BIT     0A8H.0
+  009B               182     TB8     BIT     098H.3
+  00D6               183     TH2     DATA    0D6H
+  00D6               184     T2H     DATA    0D6H
+  008A               185     IT1     BIT     088H.2
+  00AA               186     EX1     BIT     0A8H.2
+  00D4               187     TH3     DATA    0D4H
+  00D4               188     T3H     DATA    0D4H
+  00D0               189     P       BIT     0D0H.0
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     4
+
+  009F               190     SM0     BIT     098H.7
+  00D2               191     TH4     DATA    0D2H
+  00D2               192     T4H     DATA    0D2H
+  008A               193     TL0     DATA    08AH
+  009E               194     SM1     BIT     098H.6
+  008B               195     TL1     DATA    08BH
+  009D               196     SM2     BIT     098H.5
+  00D7               197     TL2     DATA    0D7H
+  00D7               198     T2L     DATA    0D7H
+  00D5               199     TL3     DATA    0D5H
+  00D5               200     T3L     DATA    0D5H
+  00D3               201     TL4     DATA    0D3H
+  00D3               202     T4L     DATA    0D3H
+  00B9               203     PT0     BIT     0B8H.1
+  00C7               204     ISP_CONTR       DATA    0C7H
+  00BB               205     PT1     BIT     0B8H.3
+  00D3               206     RS0     BIT     0D0H.3
+  00C2               207     IAP_DATA        DATA    0C2H
+  008C               208     TR0     BIT     088H.4
+  00D4               209     RS1     BIT     0D0H.4
+  008E               210     TR1     BIT     088H.6
+  00C1               211     WDT_CONTR       DATA    0C1H
+  00B8               212     PX0     BIT     0B8H.0
+  00BA               213     PX1     BIT     0B8H.2
+  00F2               214     PCA_PWM0        DATA    0F2H
+  00F3               215     PCA_PWM1        DATA    0F3H
+  00F4               216     PCA_PWM2        DATA    0F4H
+  00BB               217     VOCTRL  DATA    0BBH
+  0083               218     DPH     DATA    083H
+  00F5               219     PCA_PWM3        DATA    0F5H
+  00D1               220     T4T3M   DATA    0D1H
+  00BE               221     ADC_RESL        DATA    0BEH
+  0082               222     DPL     DATA    082H
+  00CD               223     SPSTAT  DATA    0CDH
+  00B7               224     IPH     DATA    0B7H
+  009B               225     S2BUF   DATA    09BH
+  00AD               226     S3BUF   DATA    0ADH
+  0085               227     S4BUF   DATA    085H
+  009C               228     REN     BIT     098H.4
+  009A               229     S2CON   DATA    09AH
+  00AC               230     S3CON   DATA    0ACH
+  00E3               231     DPS     DATA    0E3H
+  00C2               232     ISP_DATA        DATA    0C2H
+  0084               233     S4CON   DATA    084H
+  00EF               234     AUXINTIF        DATA    0EFH
+  00B9               235     SADEN   DATA    0B9H
+  00A9               236     SADDR   DATA    0A9H
+  00C6               237     IAP_TRIG        DATA    0C6H
+  0097               238     AUXR2   DATA    097H
+  00D5               239     F0      BIT     0D0H.5
+  00D0               240     PSW     DATA    0D0H
+  00D8               241     CCF0    BIT     0D8H.0
+  00D9               242     CCF1    BIT     0D8H.1
+  00CF               243     SPDAT   DATA    0CFH
+  0094               244     P0M0    DATA    094H
+                     245     ?PR?TaskSwitch?CPU   SEGMENT CODE 
+                     246     ?DT?TaskSwitch?CPU   SEGMENT DATA OVERLAYABLE
+                     247     ?PR?CPU              SEGMENT CODE 
+                     248             EXTRN   XDATA (TimerIRQTouchType)
+                     249             EXTRN   XDATA (RunAppPy)
+                     250             EXTRN   XDATA (TaskEndAddr)
+                     251             EXTRN   XDATA (ProTime)
+                     252             EXTRN   DATA (stack0)
+                     253             EXTRN   XDATA (SnLock)
+                     254             EXTRN   XDATA (PlanTaskId)
+                     255             EXTRN   XDATA (SP0)
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     5
+
+                     256             EXTRN   XDATA (AppRunTimer)
+                     257             EXTRN   XDATA (TPC)
+                     258             EXTRN   XDATA (RunAppID)
+                     259             EXTRN   XDATA (Pstack)
+                     260             PUBLIC  TaskSwitch
+                     261     
+----                 262             RSEG  ?DT?TaskSwitch?CPU
+0000                 263     ?TaskSwitch?BYTE:
+0000                 264           TS_F0?040:   DS   1
+                     265     ; /*---------------------------------------------------------------------------------------
+                             ---------------------------------
+                     266     ;  * ÎÄ¼þÃû³Æ£ºCPU.c
+                     267     ; 
+                     268     ;  * ÎÄ¼þÄÚÈÝ£ºÏµÍ³ÈÎÎñÄÚºË
+                     269     ; 
+                     270     ;  * ÎÄ¼þ°æ±¾£º1.0.0
+                     271     ; 
+                     272     ;  * ÎÄ¼þ×÷Õß£ºÂóÌØÊµÑéÊÒ
+                     273     ; 
+                     274     ;  * ¿ª·¢»·¾³£ºSTC8A8K64S4A12@22.1184MHzÐ¾Æ¬ & Keil uVision 5 
+                     275     ; 
+                     276     ;  * ×¢    Òâ£º
+                     277     ; -----------------------------------------------------------------------------------------
+                             -------------------------------*/
+                     278     ; /*---------------------------------------------------------------------------------------
+                             ---------------------------------
+                     279     ;                                                   ¼ÓÔØÍ·ÎÄ¼þÇø
+                     280     ; -----------------------------------------------------------------------------------------
+                             -------------------------------*/
+                     281     ; #include "Inc_Basic.h"//»ù±¾¿â
+                     282     ; #include "System_Task.h"
+                     283     ; #include "System_Clock.h"
+                     284     ; #include "Timer.h"
+                     285     ; #include "System_Control.h"
+                     286     ; #include "CPU.h"
+                     287     ; /*---------------------------------------------------------------------------------------
+                             ---------------------------------
+                     288     ;  * º¯ÊÃû³Æ£ºTaskSwitch
+                     289     ; 
+                     290     ;  * º¯Ê¹¦ÄÜ£ºÈÎÎñÇÐ»»
+                     291     ; 
+                     292     ;  * ÊäÈë²ÎÊ£ºÎÞ
+                     293     ; 
+                     294     ;  * Êä³ö²ÎÊ£ºÎÞ
+                     295     ; 
+                     296     ;  * ×¢    Òâ£ºÎÞ
+                     297     ; -----------------------------------------------------------------------------------------
+                             -------------------------------*/
+                     298     
+----                 299             RSEG  ?PR?CPU
+0000                 300     Com0017:
+0000                 301     L?0024:
+                     302             USING   0
+0000                 303     L?0025:
+0000 900000   F      304             MOV     DPTR,#RunAppID
+0003 E0              305             MOVX    A,@DPTR
+0004 75F032          306             MOV     B,#032H
+0007 A4              307             MUL     AB
+0008 2400     F      308             ADD     A,#LOW (Pstack+01H)
+000A F582            309             MOV     DPL,A
+000C E5F0            310             MOV     A,B
+000E 3400     F      311             ADDC    A,#HIGH (Pstack+01H)
+0010 F583            312             MOV     DPH,A
+0012 E582            313             MOV     A,DPL
+0014 2500     F      314             ADD     A,TS_F0?040
+0016 F582            315             MOV     DPL,A
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     6
+
+0018 E4              316             CLR     A
+0019 3583            317             ADDC    A,DPH
+001B F583            318             MOV     DPH,A
+001D 22              319             RET     
+001E                 320     L?0026:
+                     321             USING   0
+001E                 322     L?0027:
+001E 900000   F      323             MOV     DPTR,#RunAppID
+0021 E0              324             MOVX    A,@DPTR
+0022                 325     L?0028:
+0022 75F032          326             MOV     B,#032H
+0025 A4              327             MUL     AB
+0026 2400     F      328             ADD     A,#LOW (Pstack)
+0028 F582            329             MOV     DPL,A
+002A E5F0            330             MOV     A,B
+002C 3400     F      331             ADDC    A,#HIGH (Pstack)
+002E F583            332             MOV     DPH,A
+0030 22              333             RET     
+0031                 334     L?0029:
+                     335             USING   0
+0031 E4              336             CLR     A
+0032 900000   F      337             MOV     DPTR,#TimerIRQTouchType
+0035 F0              338             MOVX    @DPTR,A
+0036 900000   F      339             MOV     DPTR,#SnLock
+0039 F0              340             MOVX    @DPTR,A
+003A 900000   F      341             MOV     DPTR,#PlanTaskId
+003D F0              342             MOVX    @DPTR,A
+003E 900000   F      343             MOV     DPTR,#AppRunTimer
+0041 74FF            344             MOV     A,#0FFH
+0043 F0              345             MOVX    @DPTR,A
+0044 E4              346             CLR     A
+0045 900000   F      347             MOV     DPTR,#ProTime
+0048 F0              348             MOVX    @DPTR,A
+0049 A3              349             INC     DPTR
+004A F0              350             MOVX    @DPTR,A
+004B 22              351             RET     
+004C                 352     L?0030:
+                     353             USING   0
+004C C3              354             CLR     C
+004D E500     F      355             MOV     A,TS_F0?040
+004F 940F            356             SUBB    A,#0FH
+0051 7480            357             MOV     A,#080H
+0053 9480            358             SUBB    A,#080H
+0055 22              359             RET     
+                     360     ; END OF Com0017
+                     361     
+                     362     ; void TaskSwitch()
+                     363     
+----                 364             RSEG  ?PR?TaskSwitch?CPU
+0000                 365     TaskSwitch:
+                     366             USING   0
+                     367                             ; SOURCE LINE # 34
+                     368     ; {
+                     369                             ; SOURCE LINE # 35
+                     370     ;       u8 TS_F0;
+                     371     ;       if(TimerIRQTouchType)
+                     372                             ; SOURCE LINE # 37
+0000 900000   F      373             MOV     DPTR,#TimerIRQTouchType
+0003 E0              374             MOVX    A,@DPTR
+0004 7003            375             JNZ     $ + 5H
+0006 020000   F      376             LJMP    ?C0022
+                     377     ;       {
+                     378                             ; SOURCE LINE # 38
+                     379     ;               /*Èç¹ûÄ¿±êÈÎÎñIDÓëµ±Ç°ÈÎÎñIDÏàÍ¬£¬Ôò·ÅÆúÇÐ»»*/
+                     380     ;               if(PlanTaskId != RunAppID)
+                     381                             ; SOURCE LINE # 40
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     7
+
+0009 900000   F      382             MOV     DPTR,#RunAppID
+000C E0              383             MOVX    A,@DPTR
+000D FF              384             MOV     R7,A
+000E 900000   F      385             MOV     DPTR,#PlanTaskId
+0011 E0              386             MOVX    A,@DPTR
+0012 6F              387             XRL     A,R7
+0013 7003            388             JNZ     $ + 5H
+0015 020000   F      389             LJMP    ?C0002
+                     390     ;               {
+                     391                             ; SOURCE LINE # 41
+                     392     ;                       /*½«Õ»¼ÓÔØµ½»º³åÇø*/
+                     393     ;                       #pragma asm
+                     394     ;                       POP   stack0+0CH
+0018 D000     F      395               POP   stack0+0CH
+                     396     ;                       POP   stack0+0CH
+001A D000     F      397               POP   stack0+0CH
+                     398     ;                       POP     stack0+0CH
+001C D000     F      399               POP   stack0+0CH
+                     400     ;                       POP     stack0+0BH
+001E D000     F      401               POP   stack0+0BH
+                     402     ;                       POP     stack0+0AH
+0020 D000     F      403               POP   stack0+0AH
+                     404     ;                       POP     stack0+09H
+0022 D000     F      405               POP   stack0+09H
+                     406     ;                       POP     stack0+08H
+0024 D000     F      407               POP   stack0+08H
+                     408     ;                       POP     stack0+07H
+0026 D000     F      409               POP   stack0+07H
+                     410     ;                       POP     stack0+06H
+0028 D000     F      411               POP   stack0+06H
+                     412     ;                       POP     stack0+05H
+002A D000     F      413               POP   stack0+05H
+                     414     ;                       POP     stack0+04H
+002C D000     F      415               POP   stack0+04H
+                     416     ;                       POP     stack0+03H
+002E D000     F      417               POP   stack0+03H
+                     418     ;                       POP     stack0+02H
+0030 D000     F      419               POP   stack0+02H
+                     420     ;                       POP     stack0+01H
+0032 D000     F      421               POP   stack0+01H
+                     422     ;                       POP     stack0+00H
+0034 D000     F      423               POP   stack0+00H
+                     424     ;                       POP             stack0+0DH
+0036 D000     F      425               POP           stack0+0DH
+                     426     ;                       POP             stack0+0EH
+0038 D000     F      427               POP           stack0+0EH
+                     428     ;                       #pragma endasm
+                     429     ;                       /*½«ÈÎÎñ¼ÆÊ±Æ÷ÇåÁã*/
+                     430     ;                       AppRunTimer = NULL;
+                     431                             ; SOURCE LINE # 63
+003A E4              432             CLR     A
+003B 900000   F      433             MOV     DPTR,#AppRunTimer
+003E F0              434             MOVX    @DPTR,A
+                     435     ;                       /*Èç¹ûTimerTouchType == 1£¬Ôò±íÊ¾ÎªÈÎÎñ²¢·Ç×Ô¶¯½áÊøÔËÐÐ*/
+                     436     ;                       if(TimerIRQTouchType == Task_Touch)
+                     437                             ; SOURCE LINE # 65
+003F 900000   F      438             MOV     DPTR,#TimerIRQTouchType
+0042 E0              439             MOVX    A,@DPTR
+0043 6401            440             XRL     A,#01H
+0045 7052            441             JNZ     ?C0003
+                     442     ;                       {
+                     443                             ; SOURCE LINE # 66
+                     444     ;                               /*±£´æ±ê×¼µÄÕ»*/
+                     445     ;                               for(TS_F0 = NULL;TS_F0 < 15;TS_F0++)
+                     446                             ; SOURCE LINE # 68
+0047 F500     F      447             MOV     TS_F0?040,A
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     8
+
+0049                 448     ?C0004:
+0049 120000   F      449             LCALL   L?0030
+004C 5010            450             JNC     ?C0007
+                     451     ;                               {
+                     452                             ; SOURCE LINE # 69
+                     453     ;                                       /*±ê×¼Õ»*/
+                     454     ;                                       /*Õ»»º³åÇø-----Ð´Èë---->À©Õ¹RAMÖÐ*/
+                     455     ;                                       Pstack [RunAppID][TS_F0 + 1] = stack0[TS_F0];
+                     456                             ; SOURCE LINE # 72
+004E 7400     F      457             MOV     A,#LOW (stack0)
+0050 2500     F      458             ADD     A,TS_F0?040
+0052 F8              459             MOV     R0,A
+0053 E6              460             MOV     A,@R0
+0054 FF              461             MOV     R7,A
+0055 120000   F      462             LCALL   L?0024
+0058 EF              463             MOV     A,R7
+0059 F0              464             MOVX    @DPTR,A
+                     465     ;                               }
+                     466                             ; SOURCE LINE # 73
+005A 0500     F      467             INC     TS_F0?040
+005C 80EB            468             SJMP    ?C0004
+                     469     ;                               /*±£´æÀ©Õ¹µÄÕ»£¬¸ù¾ÝÉÏµç³õÊ¼µÄÕ»Ö¸Õë£¬×Ô¶¯¼ÆËãÕ»µÄ³¤¶È*/
+                     470     ;                               for(;(SP - SP0) > NULL;TS_F0++)
+                     471                             ; SOURCE LINE # 75
+005E                 472     ?C0007:
+005E 900000   F      473             MOV     DPTR,#SP0
+0061 E0              474             MOVX    A,@DPTR
+0062 FF              475             MOV     R7,A
+0063 AD81            476             MOV     R5,SP
+0065 C3              477             CLR     C
+0066 ED              478             MOV     A,R5
+0067 9F              479             SUBB    A,R7
+0068 FF              480             MOV     R7,A
+0069 E4              481             CLR     A
+006A 9400            482             SUBB    A,#00H
+006C FE              483             MOV     R6,A
+006D D3              484             SETB    C
+006E EF              485             MOV     A,R7
+006F 9400            486             SUBB    A,#00H
+0071 EE              487             MOV     A,R6
+0072 6480            488             XRL     A,#080H
+0074 9480            489             SUBB    A,#080H
+0076 4016            490             JC      ?C0008
+                     491     ;                               {
+                     492                             ; SOURCE LINE # 76
+                     493     ;                                       /*µ±³¬¹Õ»³ØµÄÉî¶ÈÊ±£¬Á¢¼´Í£Ö¹Ð´Èë*/
+                     494     ;                                       if(TS_F0 >= MaxStackDepth)
+                     495                             ; SOURCE LINE # 78
+0078 E500     F      496             MOV     A,TS_F0?040
+007A 9432            497             SUBB    A,#032H
+007C 7480            498             MOV     A,#080H
+007E 9480            499             SUBB    A,#080H
+0080 500C            500             JNC     ?C0008
+                     501     ;                                       {
+                     502                             ; SOURCE LINE # 79
+                     503     ;                                               break;
+                     504                             ; SOURCE LINE # 80
+                     505     ;                                       }
+                     506                             ; SOURCE LINE # 81
+                     507     ;                                       /*½øÈë³öÕ»²Ù×÷*/
+                     508     ;                                       #pragma asm
+                     509     ;                                       POP             stack0+1
+0082 D000     F      510               POP           stack0+1
+                     511     ;                                       #pragma endasm
+                     512     ;                                       /*À©Õ¹Õ»*/
+                     513     ;                                       /*Õ»»º³åÇø-----Ð´Èë---->À©Õ¹RAMÖÐ*/
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE     9
+
+                     514     ;                                       Pstack [RunAppID][TS_F0 + 1]  = stack0[1];
+                     515                             ; SOURCE LINE # 88
+0084 120000   F      516             LCALL   L?0024
+0087 E500     F      517             MOV     A,stack0+01H
+0089 F0              518             MOVX    @DPTR,A
+                     519     ;                               }
+                     520                             ; SOURCE LINE # 89
+008A 0500     F      521             INC     TS_F0?040
+008C 80D0            522             SJMP    ?C0007
+008E                 523     ?C0008:
+                     524     ;                               Pstack [RunAppID][NULL] = TS_F0 - 1;//½«Õ»³¤¶È¼ÇÂ¼µ½Õ»³ØµÄ¶
+                             ¥¶Ë
+                     525                             ; SOURCE LINE # 90
+008E E500     F      526             MOV     A,TS_F0?040
+0090 14              527             DEC     A
+0091 FF              528             MOV     R7,A
+0092 120000   F      529             LCALL   L?0026
+0095 EF              530             MOV     A,R7
+0096 F0              531             MOVX    @DPTR,A
+                     532     ;                       }
+                     533                             ; SOURCE LINE # 91
+0097 8009            534             SJMP    ?C0011
+0099                 535     ?C0003:
+                     536     ;                       else/*Èç¹ûÈÎÎñ²¢·Ç×Ô¶¯½áÊøÔËÐÐ£¬ÔòÓë¸ÃÈÎÎñµÄÕ»³Ø*/
+                     537     ;                               RunAppPy = Pstack [RunAppID][NULL] = NULL;
+                     538                             ; SOURCE LINE # 93
+0099 120000   F      539             LCALL   L?0026
+009C E4              540             CLR     A
+009D F0              541             MOVX    @DPTR,A
+009E 900000   F      542             MOV     DPTR,#RunAppPy
+00A1 F0              543             MOVX    @DPTR,A
+00A2                 544     ?C0011:
+                     545     ;                       RunAppID = PlanTaskId;/*Ë¢ÐÂÔËÐÐID*/
+                     546                             ; SOURCE LINE # 94
+00A2 900000   F      547             MOV     DPTR,#PlanTaskId
+00A5 E0              548             MOVX    A,@DPTR
+00A6 900000   F      549             MOV     DPTR,#RunAppID
+00A9 F0              550             MOVX    @DPTR,A
+                     551     ;                       if(Pstack[RunAppID][NULL] == NULL)//×¼±¸¾ÍÐ÷Ì¬
+                     552                             ; SOURCE LINE # 95
+00AA 120000   F      553             LCALL   L?0028
+00AD E0              554             MOVX    A,@DPTR
+00AE 702D            555             JNZ     ?C0012
+                     556     ;                       {
+                     557                             ; SOURCE LINE # 96
+                     558     ;                               /*¼ÓÔØ³õÊ¼º¯ÊµØÖ·µ½»º³åÇø*/
+                     559     ;                               stack0 [13] = TPC >> 8;
+                     560                             ; SOURCE LINE # 98
+00B0 900000   F      561             MOV     DPTR,#TPC
+00B3 E0              562             MOVX    A,@DPTR
+00B4 FC              563             MOV     R4,A
+00B5 A3              564             INC     DPTR
+00B6 E0              565             MOVX    A,@DPTR
+00B7 FD              566             MOV     R5,A
+00B8 EC              567             MOV     A,R4
+00B9 F500     F      568             MOV     stack0+0DH,A
+                     569     ;                               stack0 [14]=  TPC & 0x00FF;
+                     570                             ; SOURCE LINE # 99
+00BB ED              571             MOV     A,R5
+00BC F500     F      572             MOV     stack0+0EH,A
+                     573     ;                               
+                     574     ;                               if(RunAppID > NULL)
+                     575                             ; SOURCE LINE # 101
+00BE 900000   F      576             MOV     DPTR,#RunAppID
+00C1 E0              577             MOVX    A,@DPTR
+00C2 D3              578             SETB    C
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    10
+
+00C3 9400            579             SUBB    A,#00H
+00C5 7480            580             MOV     A,#080H
+00C7 9480            581             SUBB    A,#080H
+00C9 4051            582             JC      ?C0014
+                     583     ;                               {
+                     584                             ; SOURCE LINE # 102
+                     585     ;                                       /*½«ÔËÐÐ×Ô¶¯·µ»ØµÄÖ¸ÕëÐ´Èëµ½»º³åÇøÖÐ*/
+                     586     ;                                       stack0 [16] = TaskEndAddr & 0x00FF;
+                     587                             ; SOURCE LINE # 104
+00CB 900000   F      588             MOV     DPTR,#TaskEndAddr
+00CE E0              589             MOVX    A,@DPTR
+00CF FE              590             MOV     R6,A
+00D0 A3              591             INC     DPTR
+00D1 E0              592             MOVX    A,@DPTR
+00D2 F500     F      593             MOV     stack0+010H,A
+                     594     ;                                       stack0 [15] = TaskEndAddr >> 8;
+                     595                             ; SOURCE LINE # 105
+00D4 EE              596             MOV     A,R6
+00D5 F500     F      597             MOV     stack0+0FH,A
+                     598     ;                                       /*½øÐÐÑ¹Õ»²Ù×÷£¬½«ÔËÐÐ×Ô¶¯·µ»ØµÄÖ¸Õë´Ó»º³åÇøÖÐÐ´Èëµ
+                             ½Õ»ÖÐ*/
+                     599     ;                                       #pragma asm
+                     600     ;                                       PUSH    stack0 + 10H
+00D7 C000     F      601               PUSH  stack0 + 10H
+                     602     ;                                       PUSH    stack0 + 0FH
+00D9 C000     F      603               PUSH  stack0 + 0FH
+                     604     ;                                       #pragma endasm
+                     605     ;                               }
+                     606                             ; SOURCE LINE # 111
+                     607     ;                       }
+                     608                             ; SOURCE LINE # 112
+00DB 803F            609             SJMP    ?C0014
+00DD                 610     ?C0012:
+                     611     ;                       else if(Pstack [RunAppID][NULL] > NULL)//¹ÒÆð¾ÍÐ÷Ì¬
+                     612                             ; SOURCE LINE # 113
+00DD 120000   F      613             LCALL   L?0027
+00E0 E0              614             MOVX    A,@DPTR
+00E1 FF              615             MOV     R7,A
+00E2 D3              616             SETB    C
+00E3 9400            617             SUBB    A,#00H
+00E5 7480            618             MOV     A,#080H
+00E7 9480            619             SUBB    A,#080H
+00E9 4031            620             JC      ?C0014
+                     621     ;                       {
+                     622                             ; SOURCE LINE # 114
+                     623     ;                               /*À©Õ¹Õ»*/
+                     624     ;                               /*ÒÔ±£´æµ½Õ»³ØÖÐµÄÍ·²¿µÄ³¤¶ÈÐÅÏ¢£¬½«Õ»³ØÖÐÊ¾ÝÑ¹µ½Õ»ÖÐ*/
+                     625     ;                               for(TS_F0 = Pstack [RunAppID][NULL];TS_F0 > 14;TS_F0--)
+                     626                             ; SOURCE LINE # 117
+00EB 8F00     F      627             MOV     TS_F0?040,R7
+00ED                 628     ?C0016:
+00ED D3              629             SETB    C
+00EE E500     F      630             MOV     A,TS_F0?040
+00F0 940E            631             SUBB    A,#0EH
+00F2 7480            632             MOV     A,#080H
+00F4 9480            633             SUBB    A,#080H
+00F6 400C            634             JC      ?C0017
+                     635     ;                               {
+                     636                             ; SOURCE LINE # 118
+                     637     ;                                       /*À©Õ¹RAM-----Ð´Èë---->Õ»»º³åÇø*/
+                     638     ;                                       stack0[NULL] = Pstack [RunAppID][TS_F0 + 1] ;
+                     639                             ; SOURCE LINE # 120
+00F8 120000   F      640             LCALL   L?0025
+00FB E0              641             MOVX    A,@DPTR
+00FC F500     F      642             MOV     stack0,A
+                     643     ;                                       #pragma asm
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    11
+
+                     644     ;                                       PUSH    stack0
+00FE C000     F      645               PUSH  stack0
+                     646     ;                                       #pragma endasm
+                     647     ;                               }
+                     648                             ; SOURCE LINE # 124
+0100 1500     F      649             DEC     TS_F0?040
+0102 80E9            650             SJMP    ?C0016
+0104                 651     ?C0017:
+                     652     ;                               /*±ê×¼Õ»*/
+                     653     ;                               /*À©Õ¹RAM-----Ð´Èë---->Õ»»º³åÇø*/
+                     654     ;                               for(TS_F0 = 0;TS_F0 < 15;TS_F0++)
+                     655                             ; SOURCE LINE # 127
+0104 E4              656             CLR     A
+0105 F500     F      657             MOV     TS_F0?040,A
+0107                 658     ?C0019:
+0107 120000   F      659             LCALL   L?0030
+010A 5010            660             JNC     ?C0014
+                     661     ;                               {
+                     662                             ; SOURCE LINE # 128
+                     663     ;                                       stack0 [TS_F0] = Pstack [RunAppID][TS_F0 + 1] ;
+                     664                             ; SOURCE LINE # 129
+010C 120000   F      665             LCALL   L?0025
+010F E0              666             MOVX    A,@DPTR
+0110 FF              667             MOV     R7,A
+0111 7400     F      668             MOV     A,#LOW (stack0)
+0113 2500     F      669             ADD     A,TS_F0?040
+0115 F8              670             MOV     R0,A
+0116 A607            671             MOV     @R0,AR7
+                     672     ;                               }
+                     673                             ; SOURCE LINE # 130
+0118 0500     F      674             INC     TS_F0?040
+011A 80EB            675             SJMP    ?C0019
+                     676     ;                       }
+                     677                             ; SOURCE LINE # 131
+011C                 678     ?C0014:
+                     679     ;                       /*¸´Î»¼¤»î±êÖ¾Î»*/
+                     680     ;                       TimerIRQTouchType = NULL;
+                     681                             ; SOURCE LINE # 133
+                     682     ;                       /*¸´Î»ÇÐ»»Ëø*/
+                     683     ;                       SnLock = NULL; 
+                     684                             ; SOURCE LINE # 135
+                     685     ;                       /*¸´Î»Ë¢ÐÂËø*/
+                     686     ;                       PlanTaskId = NULL;
+                     687                             ; SOURCE LINE # 137
+                     688     ;                       /*ÖØÐÂ×°ÔØµ½ÈÎÎñ¼ÆÊ±Æ÷ÖÐ*/
+                     689     ;                       AppRunTimer = 0xFF;
+                     690                             ; SOURCE LINE # 139
+                     691     ;                       /*¸´Î»±£»¤Ê±³¤*/
+                     692     ;                       ProTime = NULL;
+                     693                             ; SOURCE LINE # 141
+011C 120000   F      694             LCALL   L?0029
+                     695     ; 
+                     696     ;                       /*½«»º³åÇø¼ÓÔØµ½Õ»*/
+                     697     ;                       #pragma asm
+                     698     ;                       MOV     ACC , stack0+00H
+011F 8500E0   F      699               MOV   ACC , stack0+00H
+                     700     ;                       MOV     B , stack0+01H
+0122 8500F0   F      701               MOV   B , stack0+01H
+                     702     ;                       MOV     DPH , stack0+02H
+0125 850083   F      703               MOV   DPH , stack0+02H
+                     704     ;                       MOV     DPL , stack0+03H
+0128 850082   F      705               MOV   DPL , stack0+03H
+                     706     ;                       MOV     PSW , stack0+04H
+012B 8500D0   F      707               MOV   PSW , stack0+04H
+                     708     ;                       MOV     0x00 , stack0+05H
+012E 850000   F      709               MOV   0x00 , stack0+05H
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    12
+
+                     710     ;                       MOV     0x01 , stack0+06H
+0131 850001   F      711               MOV   0x01 , stack0+06H
+                     712     ;                       MOV     0x02 , stack0+07H
+0134 850002   F      713               MOV   0x02 , stack0+07H
+                     714     ;                       MOV     0x03 , stack0+08H
+0137 850003   F      715               MOV   0x03 , stack0+08H
+                     716     ;                       MOV     0x04 , stack0+09H
+013A 850004   F      717               MOV   0x04 , stack0+09H
+                     718     ;                       MOV     0x05 , stack0+0AH
+013D 850005   F      719               MOV   0x05 , stack0+0AH
+                     720     ;                       MOV     0x06 , stack0+0BH
+0140 850006   F      721               MOV   0x06 , stack0+0BH
+                     722     ;                       MOV     0x07 , stack0+0CH
+0143 850007   F      723               MOV   0x07 , stack0+0CH
+                     724     ;                       PUSH    stack0+0EH
+0146 C000     F      725               PUSH  stack0+0EH
+                     726     ;                       PUSH    stack0+0DH
+0148 C000     F      727               PUSH  stack0+0DH
+                     728     ;                       RETI
+014A 32              729               RETI
+                     730     ;                       #pragma endasm
+                     731     ;               }
+                     732                             ; SOURCE LINE # 162
+014B                 733     ?C0002:
+                     734     ;               /*¸´Î»¼¤»î±êÖ¾Î»*/
+                     735     ;               TimerIRQTouchType = NULL;
+                     736                             ; SOURCE LINE # 164
+                     737     ;               /*¸´Î»ÇÐ»»Ëø*/
+                     738     ;               SnLock = NULL; 
+                     739                             ; SOURCE LINE # 166
+                     740     ;               /*¸´Î»Ë¢ÐÂËø*/
+                     741     ;               PlanTaskId = NULL;
+                     742                             ; SOURCE LINE # 168
+                     743     ;               /*ÖØÐÂ×°ÔØµ½ÈÎÎñ¼ÆÊ±Æ÷ÖÐ*/
+                     744     ;               AppRunTimer = 0xFF;
+                     745                             ; SOURCE LINE # 170
+                     746     ;               /*¸´Î»±£»¤Ê±³¤*/
+                     747     ;               ProTime = NULL;
+                     748                             ; SOURCE LINE # 172
+014B 120000   F      749             LCALL   L?0029
+                     750     ;       }
+                     751                             ; SOURCE LINE # 173
+                     752     ; }
+                     753                             ; SOURCE LINE # 174
+014E                 754     ?C0022:
+014E 22              755             RET     
+                     756     ; END OF TaskSwitch
+                     757     
+                     758             END
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    13
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+?C0002 . . . . . .  C ADDR   014BH   R   SEG=?PR?TASKSWITCH?CPU
+?C0003 . . . . . .  C ADDR   0099H   R   SEG=?PR?TASKSWITCH?CPU
+?C0004 . . . . . .  C ADDR   0049H   R   SEG=?PR?TASKSWITCH?CPU
+?C0007 . . . . . .  C ADDR   005EH   R   SEG=?PR?TASKSWITCH?CPU
+?C0008 . . . . . .  C ADDR   008EH   R   SEG=?PR?TASKSWITCH?CPU
+?C0011 . . . . . .  C ADDR   00A2H   R   SEG=?PR?TASKSWITCH?CPU
+?C0012 . . . . . .  C ADDR   00DDH   R   SEG=?PR?TASKSWITCH?CPU
+?C0014 . . . . . .  C ADDR   011CH   R   SEG=?PR?TASKSWITCH?CPU
+?C0016 . . . . . .  C ADDR   00EDH   R   SEG=?PR?TASKSWITCH?CPU
+?C0017 . . . . . .  C ADDR   0104H   R   SEG=?PR?TASKSWITCH?CPU
+?C0019 . . . . . .  C ADDR   0107H   R   SEG=?PR?TASKSWITCH?CPU
+?C0022 . . . . . .  C ADDR   014EH   R   SEG=?PR?TASKSWITCH?CPU
+?DT?TASKSWITCH?CPU  D SEG    0001H       REL=UNIT
+?PR?CPU. . . . . .  C SEG    0056H       REL=UNIT
+?PR?TASKSWITCH?CPU  C SEG    014FH       REL=UNIT
+?TASKSWITCH?BYTE .  D ADDR   0000H   R   SEG=?DT?TASKSWITCH?CPU
+AC . . . . . . . .  B ADDR   00D0H.6 A   
+ACC. . . . . . . .  D ADDR   00E0H   A   
+ADCCFG . . . . . .  D ADDR   00DEH   A   
+ADC_CONTR. . . . .  D ADDR   00BCH   A   
+ADC_RES. . . . . .  D ADDR   00BDH   A   
+ADC_RESL . . . . .  D ADDR   00BEH   A   
+APPRUNTIMER. . . .  X ADDR   -----       EXT
+AR7. . . . . . . .  D ADDR   0007H   A   
+AUXINTIF . . . . .  D ADDR   00EFH   A   
+AUXR . . . . . . .  D ADDR   008EH   A   
+AUXR2. . . . . . .  D ADDR   0097H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+BUS_SPEED. . . . .  D ADDR   00A1H   A   
+CCAP0H . . . . . .  D ADDR   00FAH   A   
+CCAP0L . . . . . .  D ADDR   00EAH   A   
+CCAP1H . . . . . .  D ADDR   00FBH   A   
+CCAP1L . . . . . .  D ADDR   00EBH   A   
+CCAP2H . . . . . .  D ADDR   00FCH   A   
+CCAP2L . . . . . .  D ADDR   00ECH   A   
+CCAP3H . . . . . .  D ADDR   00FDH   A   
+CCAP3L . . . . . .  D ADDR   00EDH   A   
+CCAPM0 . . . . . .  D ADDR   00DAH   A   
+CCAPM1 . . . . . .  D ADDR   00DBH   A   
+CCAPM2 . . . . . .  D ADDR   00DCH   A   
+CCAPM3 . . . . . .  D ADDR   00DDH   A   
+CCF0 . . . . . . .  B ADDR   00D8H.0 A   
+CCF1 . . . . . . .  B ADDR   00D8H.1 A   
+CCF2 . . . . . . .  B ADDR   00D8H.2 A   
+CCF3 . . . . . . .  B ADDR   00D8H.3 A   
+CCON . . . . . . .  D ADDR   00D8H   A   
+CF . . . . . . . .  B ADDR   00D8H.7 A   
+CH . . . . . . . .  D ADDR   00F9H   A   
+CL . . . . . . . .  D ADDR   00E9H   A   
+CMOD . . . . . . .  D ADDR   00D9H   A   
+CMPCR1 . . . . . .  D ADDR   00E6H   A   
+CMPCR2 . . . . . .  D ADDR   00E7H   A   
+COM0017. . . . . .  C ADDR   0000H   R   SEG=?PR?CPU
+CPU. . . . . . . .  N NUMB   -----       
+CR . . . . . . . .  B ADDR   00D8H.6 A   
+CY . . . . . . . .  B ADDR   00D0H.7 A   
+DPH. . . . . . . .  D ADDR   0083H   A   
+DPH1 . . . . . . .  D ADDR   00E5H   A   
+DPL. . . . . . . .  D ADDR   0082H   A   
+DPL1 . . . . . . .  D ADDR   00E4H   A   
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    14
+
+DPS. . . . . . . .  D ADDR   00E3H   A   
+EA . . . . . . . .  B ADDR   00A8H.7 A   
+EADC . . . . . . .  B ADDR   00A8H.5 A   
+ELVD . . . . . . .  B ADDR   00A8H.6 A   
+ES . . . . . . . .  B ADDR   00A8H.4 A   
+ET0. . . . . . . .  B ADDR   00A8H.1 A   
+ET1. . . . . . . .  B ADDR   00A8H.3 A   
+EX0. . . . . . . .  B ADDR   00A8H.0 A   
+EX1. . . . . . . .  B ADDR   00A8H.2 A   
+F0 . . . . . . . .  B ADDR   00D0H.5 A   
+IAP_ADDRH. . . . .  D ADDR   00C3H   A   
+IAP_ADDRL. . . . .  D ADDR   00C4H   A   
+IAP_CMD. . . . . .  D ADDR   00C5H   A   
+IAP_CONTR. . . . .  D ADDR   00C7H   A   
+IAP_DATA . . . . .  D ADDR   00C2H   A   
+IAP_TRIG . . . . .  D ADDR   00C6H   A   
+IE . . . . . . . .  D ADDR   00A8H   A   
+IE0. . . . . . . .  B ADDR   0088H.1 A   
+IE1. . . . . . . .  B ADDR   0088H.3 A   
+IE2. . . . . . . .  D ADDR   00AFH   A   
+INTCLKO. . . . . .  D ADDR   008FH   A   
+IP . . . . . . . .  D ADDR   00B8H   A   
+IP2. . . . . . . .  D ADDR   00B5H   A   
+IP2H . . . . . . .  D ADDR   00B6H   A   
+IPH. . . . . . . .  D ADDR   00B7H   A   
+ISP_ADDRH. . . . .  D ADDR   00C3H   A   
+ISP_ADDRL. . . . .  D ADDR   00C4H   A   
+ISP_CMD. . . . . .  D ADDR   00C5H   A   
+ISP_CONTR. . . . .  D ADDR   00C7H   A   
+ISP_DATA . . . . .  D ADDR   00C2H   A   
+ISP_TRIG . . . . .  D ADDR   00C6H   A   
+IT0. . . . . . . .  B ADDR   0088H.0 A   
+IT1. . . . . . . .  B ADDR   0088H.2 A   
+L?0024 . . . . . .  C ADDR   0000H   R   SEG=?PR?CPU
+L?0025 . . . . . .  C ADDR   0000H   R   SEG=?PR?CPU
+L?0026 . . . . . .  C ADDR   001EH   R   SEG=?PR?CPU
+L?0027 . . . . . .  C ADDR   001EH   R   SEG=?PR?CPU
+L?0028 . . . . . .  C ADDR   0022H   R   SEG=?PR?CPU
+L?0029 . . . . . .  C ADDR   0031H   R   SEG=?PR?CPU
+L?0030 . . . . . .  C ADDR   004CH   R   SEG=?PR?CPU
+OV . . . . . . . .  B ADDR   00D0H.2 A   
+P. . . . . . . . .  B ADDR   00D0H.0 A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P00. . . . . . . .  B ADDR   0080H.0 A   
+P01. . . . . . . .  B ADDR   0080H.1 A   
+P02. . . . . . . .  B ADDR   0080H.2 A   
+P03. . . . . . . .  B ADDR   0080H.3 A   
+P04. . . . . . . .  B ADDR   0080H.4 A   
+P05. . . . . . . .  B ADDR   0080H.5 A   
+P06. . . . . . . .  B ADDR   0080H.6 A   
+P07. . . . . . . .  B ADDR   0080H.7 A   
+P0M0 . . . . . . .  D ADDR   0094H   A   
+P0M1 . . . . . . .  D ADDR   0093H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P10. . . . . . . .  B ADDR   0090H.0 A   
+P11. . . . . . . .  B ADDR   0090H.1 A   
+P12. . . . . . . .  B ADDR   0090H.2 A   
+P13. . . . . . . .  B ADDR   0090H.3 A   
+P14. . . . . . . .  B ADDR   0090H.4 A   
+P15. . . . . . . .  B ADDR   0090H.5 A   
+P16. . . . . . . .  B ADDR   0090H.6 A   
+P17. . . . . . . .  B ADDR   0090H.7 A   
+P1M0 . . . . . . .  D ADDR   0092H   A   
+P1M1 . . . . . . .  D ADDR   0091H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+P20. . . . . . . .  B ADDR   00A0H.0 A   
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    15
+
+P21. . . . . . . .  B ADDR   00A0H.1 A   
+P22. . . . . . . .  B ADDR   00A0H.2 A   
+P23. . . . . . . .  B ADDR   00A0H.3 A   
+P24. . . . . . . .  B ADDR   00A0H.4 A   
+P25. . . . . . . .  B ADDR   00A0H.5 A   
+P26. . . . . . . .  B ADDR   00A0H.6 A   
+P27. . . . . . . .  B ADDR   00A0H.7 A   
+P2M0 . . . . . . .  D ADDR   0096H   A   
+P2M1 . . . . . . .  D ADDR   0095H   A   
+P3 . . . . . . . .  D ADDR   00B0H   A   
+P30. . . . . . . .  B ADDR   00B0H.0 A   
+P31. . . . . . . .  B ADDR   00B0H.1 A   
+P32. . . . . . . .  B ADDR   00B0H.2 A   
+P33. . . . . . . .  B ADDR   00B0H.3 A   
+P34. . . . . . . .  B ADDR   00B0H.4 A   
+P35. . . . . . . .  B ADDR   00B0H.5 A   
+P36. . . . . . . .  B ADDR   00B0H.6 A   
+P37. . . . . . . .  B ADDR   00B0H.7 A   
+P3M0 . . . . . . .  D ADDR   00B2H   A   
+P3M1 . . . . . . .  D ADDR   00B1H   A   
+P4 . . . . . . . .  D ADDR   00C0H   A   
+P40. . . . . . . .  B ADDR   00C0H.0 A   
+P41. . . . . . . .  B ADDR   00C0H.1 A   
+P42. . . . . . . .  B ADDR   00C0H.2 A   
+P43. . . . . . . .  B ADDR   00C0H.3 A   
+P44. . . . . . . .  B ADDR   00C0H.4 A   
+P45. . . . . . . .  B ADDR   00C0H.5 A   
+P46. . . . . . . .  B ADDR   00C0H.6 A   
+P47. . . . . . . .  B ADDR   00C0H.7 A   
+P4M0 . . . . . . .  D ADDR   00B4H   A   
+P4M1 . . . . . . .  D ADDR   00B3H   A   
+P5 . . . . . . . .  D ADDR   00C8H   A   
+P50. . . . . . . .  B ADDR   00C8H.0 A   
+P51. . . . . . . .  B ADDR   00C8H.1 A   
+P52. . . . . . . .  B ADDR   00C8H.2 A   
+P53. . . . . . . .  B ADDR   00C8H.3 A   
+P54. . . . . . . .  B ADDR   00C8H.4 A   
+P55. . . . . . . .  B ADDR   00C8H.5 A   
+P56. . . . . . . .  B ADDR   00C8H.6 A   
+P57. . . . . . . .  B ADDR   00C8H.7 A   
+P5M0 . . . . . . .  D ADDR   00CAH   A   
+P5M1 . . . . . . .  D ADDR   00C9H   A   
+P6 . . . . . . . .  D ADDR   00E8H   A   
+P60. . . . . . . .  B ADDR   00E8H.0 A   
+P61. . . . . . . .  B ADDR   00E8H.1 A   
+P62. . . . . . . .  B ADDR   00E8H.2 A   
+P63. . . . . . . .  B ADDR   00E8H.3 A   
+P64. . . . . . . .  B ADDR   00E8H.4 A   
+P65. . . . . . . .  B ADDR   00E8H.5 A   
+P66. . . . . . . .  B ADDR   00E8H.6 A   
+P67. . . . . . . .  B ADDR   00E8H.7 A   
+P6M0 . . . . . . .  D ADDR   00CCH   A   
+P6M1 . . . . . . .  D ADDR   00CBH   A   
+P7 . . . . . . . .  D ADDR   00F8H   A   
+P70. . . . . . . .  B ADDR   00F8H.0 A   
+P71. . . . . . . .  B ADDR   00F8H.1 A   
+P72. . . . . . . .  B ADDR   00F8H.2 A   
+P73. . . . . . . .  B ADDR   00F8H.3 A   
+P74. . . . . . . .  B ADDR   00F8H.4 A   
+P75. . . . . . . .  B ADDR   00F8H.5 A   
+P76. . . . . . . .  B ADDR   00F8H.6 A   
+P77. . . . . . . .  B ADDR   00F8H.7 A   
+P7M0 . . . . . . .  D ADDR   00E2H   A   
+P7M1 . . . . . . .  D ADDR   00E1H   A   
+PADC . . . . . . .  B ADDR   00B8H.5 A   
+PCA_PWM0 . . . . .  D ADDR   00F2H   A   
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    16
+
+PCA_PWM1 . . . . .  D ADDR   00F3H   A   
+PCA_PWM2 . . . . .  D ADDR   00F4H   A   
+PCA_PWM3 . . . . .  D ADDR   00F5H   A   
+PCON . . . . . . .  D ADDR   0087H   A   
+PLANTASKID . . . .  X ADDR   -----       EXT
+PLVD . . . . . . .  B ADDR   00B8H.6 A   
+PPCA . . . . . . .  B ADDR   00B8H.7 A   
+PROTIME. . . . . .  X ADDR   -----       EXT
+PS . . . . . . . .  B ADDR   00B8H.4 A   
+PSTACK . . . . . .  X ADDR   -----       EXT
+PSW. . . . . . . .  D ADDR   00D0H   A   
+PT0. . . . . . . .  B ADDR   00B8H.1 A   
+PT1. . . . . . . .  B ADDR   00B8H.3 A   
+PWMCFG . . . . . .  D ADDR   00F1H   A   
+PWMCR. . . . . . .  D ADDR   00FEH   A   
+PWMFDCR. . . . . .  D ADDR   00F7H   A   
+PWMIF. . . . . . .  D ADDR   00F6H   A   
+PX0. . . . . . . .  B ADDR   00B8H.0 A   
+PX1. . . . . . . .  B ADDR   00B8H.2 A   
+P_SW1. . . . . . .  D ADDR   00A2H   A   
+P_SW2. . . . . . .  D ADDR   00BAH   A   
+RB8. . . . . . . .  B ADDR   0098H.2 A   
+REN. . . . . . . .  B ADDR   0098H.4 A   
+RI . . . . . . . .  B ADDR   0098H.0 A   
+RS0. . . . . . . .  B ADDR   00D0H.3 A   
+RS1. . . . . . . .  B ADDR   00D0H.4 A   
+RSTCFG . . . . . .  D ADDR   00FFH   A   
+RUNAPPID . . . . .  X ADDR   -----       EXT
+RUNAPPPY . . . . .  X ADDR   -----       EXT
+S2BUF. . . . . . .  D ADDR   009BH   A   
+S2CON. . . . . . .  D ADDR   009AH   A   
+S3BUF. . . . . . .  D ADDR   00ADH   A   
+S3CON. . . . . . .  D ADDR   00ACH   A   
+S4BUF. . . . . . .  D ADDR   0085H   A   
+S4CON. . . . . . .  D ADDR   0084H   A   
+SADDR. . . . . . .  D ADDR   00A9H   A   
+SADEN. . . . . . .  D ADDR   00B9H   A   
+SBUF . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . .  D ADDR   0098H   A   
+SM0. . . . . . . .  B ADDR   0098H.7 A   
+SM1. . . . . . . .  B ADDR   0098H.6 A   
+SM2. . . . . . . .  B ADDR   0098H.5 A   
+SNLOCK . . . . . .  X ADDR   -----       EXT
+SP . . . . . . . .  D ADDR   0081H   A   
+SP0. . . . . . . .  X ADDR   -----       EXT
+SPCTL. . . . . . .  D ADDR   00CEH   A   
+SPDAT. . . . . . .  D ADDR   00CFH   A   
+SPSTAT . . . . . .  D ADDR   00CDH   A   
+STACK0 . . . . . .  D ADDR   -----       EXT
+T2H. . . . . . . .  D ADDR   00D6H   A   
+T2L. . . . . . . .  D ADDR   00D7H   A   
+T3H. . . . . . . .  D ADDR   00D4H   A   
+T3L. . . . . . . .  D ADDR   00D5H   A   
+T4H. . . . . . . .  D ADDR   00D2H   A   
+T4L. . . . . . . .  D ADDR   00D3H   A   
+T4T3M. . . . . . .  D ADDR   00D1H   A   
+TA . . . . . . . .  D ADDR   00AEH   A   
+TASKENDADDR. . . .  X ADDR   -----       EXT
+TASKSWITCH . . . .  C ADDR   0000H   R   SEG=?PR?TASKSWITCH?CPU
+TB8. . . . . . . .  B ADDR   0098H.3 A   
+TCON . . . . . . .  D ADDR   0088H   A   
+TF0. . . . . . . .  B ADDR   0088H.5 A   
+TF1. . . . . . . .  B ADDR   0088H.7 A   
+TH0. . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . .  D ADDR   008DH   A   
+TH2. . . . . . . .  D ADDR   00D6H   A   
+A51 MACRO ASSEMBLER  CPU                                                                  03/26/2022 15:24:42 PAGE    17
+
+TH3. . . . . . . .  D ADDR   00D4H   A   
+TH4. . . . . . . .  D ADDR   00D2H   A   
+TI . . . . . . . .  B ADDR   0098H.1 A   
+TIMERIRQTOUCHTYPE.  X ADDR   -----       EXT
+TL0. . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . .  D ADDR   008BH   A   
+TL2. . . . . . . .  D ADDR   00D7H   A   
+TL3. . . . . . . .  D ADDR   00D5H   A   
+TL4. . . . . . . .  D ADDR   00D3H   A   
+TMOD . . . . . . .  D ADDR   0089H   A   
+TPC. . . . . . . .  X ADDR   -----       EXT
+TR0. . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . .  B ADDR   0088H.6 A   
+TS_F0?040. . . . .  D ADDR   0000H   R   SEG=?DT?TASKSWITCH?CPU
+VOCTRL . . . . . .  D ADDR   00BBH   A   
+WDT_CONTR. . . . .  D ADDR   00C1H   A   
+WKTCH. . . . . . .  D ADDR   00ABH   A   
+WKTCL. . . . . . .  D ADDR   00AAH   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
